@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<header>
+
+    <div class="logo">
+        <i class="fa-solid fa-users"></i>
+        <h2>User Management System</h2>
+    </div>
+<nav>
+
+<a href="index.html" class="nav-btn">
+    <i class="fa-solid fa-house"></i> Home
+</a>
+
+<a href="dashboard.html" class="nav-btn">
+    <i class="fa-solid fa-chart-line"></i> Dashboard
+</a>
+
+<a href="addUser.html" class="nav-btn">
+    <i class="fa-solid fa-user-plus"></i> Add User
+</a>
+
+<a href="viewUsers.html" class="nav-btn">
+    <i class="fa-solid fa-users"></i> View Users
+</a>
+
+<a href="login.html" class="nav-btn login-btn">
+    <i class="fa-solid fa-right-to-bracket"></i> Login
+</a>
+
+<a href="register.html" class="nav-btn register-btn">
+    <i class="fa-solid fa-user-plus"></i> Register
+</a>
+
+<a href="#" onclick="logout()" class="nav-btn logout-btn">
+    <i class="fa-solid fa-right-from-bracket"></i> Logout
+</a>
+
+</nav>
+
+</header>
+
+<section class="dashboard">
+
+<h1>Dashboard</h1>
+
+
+<div class="dashboard-card">
+
+<img src="images/login.png" class="card-image">
+
+<i class="fa-solid fa-users"></i>
+
+<h2>Total Users</h2>
+
+<p id="totalUsers">0</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-user-plus"></i>
+
+<h2>Add User</h2>
+
+<a href="addUser.html" class="btn">Open</a>
+
+</div>
+
+<div class="dashboard-card">
+
+<i class="fa-solid fa-list"></i>
+
+<h2>View Users</h2>
+
+<a href="viewUser.html" class="btn">Open</a>
+
+</div>
+
+</div>
+
+</section>
+<script>
+fetch("/users/check-login")
+.then(res => res.json())
+.then(data => {
+
+    if(!data.loggedIn){
+        window.location = "login.html";
+    }
+
+});
+</script>
+
+<footer>
+
+<p>© 2026 User Management System</p>
+
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>

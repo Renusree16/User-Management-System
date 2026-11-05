@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Create Account</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- Header Navigation -->
+
+<header>
+
+
+<div class="logo">
+
+<i class="fa-solid fa-users"></i>
+
+<h2>User Management System</h2>
+
+</div>
+
+
+
+<nav>
+
+
+<a href="index.html" class="nav-btn">
+<i class="fa-solid fa-house"></i>
+Home
+</a>
+
+
+<a href="dashboard.html" class="nav-btn">
+<i class="fa-solid fa-chart-line"></i>
+Dashboard
+</a>
+
+
+<a href="addUser.html" class="nav-btn">
+<i class="fa-solid fa-user-plus"></i>
+Add User
+</a>
+
+
+<a href="viewUsers.html" class="nav-btn">
+<i class="fa-solid fa-users"></i>
+View Users
+</a>
+
+
+
+<a href="login.html" class="nav-btn login-btn">
+
+<i class="fa-solid fa-right-to-bracket"></i>
+
+Login
+
+</a>
+
+
+
+<a href="register.html" class="nav-btn register-btn">
+
+<i class="fa-solid fa-user-plus"></i>
+
+Register
+
+</a>
+
+
+
+<a href="#" onclick="logout()" class="nav-btn logout-btn">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+<!-- Register Form -->
+
+
+<div class="form-container">
+
+
+<!-- User Image Added -->
+
+<img src="images/login.png" class="form-image">
+
+
+
+<h2>
+<i class="fa-solid fa-user-plus"></i>
+Create Account
+</h2>
+
+
+
+<form id="registerForm">
+
+
+<input 
+type="text" 
+id="name" 
+placeholder="Enter Name"
+required>
+
+
+
+<input 
+type="email" 
+id="email" 
+placeholder="Enter Email"
+required>
+
+
+
+<input 
+type="password" 
+id="password" 
+placeholder="Enter Password"
+required>
+
+
+
+<input 
+type="text" 
+id="phone" 
+placeholder="Enter Phone Number"
+required>
+
+
+
+<button type="submit">
+
+<i class="fa-solid fa-user-plus"></i>
+
+Register
+
+</button>
+
+
+</form>
+
+
+
+<p style="text-align:center;margin-top:20px;">
+
+Already have an account?
+
+<a href="login.html">
+Login Here
+</a>
+
+</p>
+
+
+</div>
+
+
+
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>
